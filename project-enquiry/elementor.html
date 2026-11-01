@@ -1,0 +1,230 @@
+<!-- Paste this entire fragment into one Elementor HTML widget. -->
+<section class="asl-enquiry" aria-label="Assure Solutions project enquiry">
+<style>
+.asl-enquiry {
+  /* Verified on assure.co.ke: --assure-blue and --ap-gold (1 November 2026). */
+  --asl-ink: #1c2541;
+  --asl-accent: #f8d79f;
+  --asl-muted: #526078;
+  --asl-border: #8590a3;
+  --asl-surface: #f5f7fa;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 980px;
+  margin: 24px auto;
+  padding: clamp(20px, 5vw, 48px);
+  border: 1px solid #dce1e9;
+  border-top: 4px solid var(--asl-accent);
+  border-radius: 24px;
+  background: #fff;
+  color: var(--asl-ink);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 0 12px 36px rgba(28, 37, 65, .06);
+  overflow-wrap: anywhere;
+  color-scheme: light;
+}
+.asl-enquiry *, .asl-enquiry *::before, .asl-enquiry *::after { box-sizing: border-box; }
+.asl-enquiry h2 {
+  max-width: 22ch;
+  margin: 12px 0 20px;
+  color: var(--asl-ink);
+  font-family: inherit;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+.asl-enquiry p { margin: 0 0 20px; }
+.asl-enquiry .asl-kicker {
+  color: var(--asl-ink);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: .12em;
+  font-weight: 750;
+}
+.asl-enquiry .asl-note { color: var(--asl-muted); font-size: 14px; line-height: 1.65; }
+.asl-enquiry form { margin: 0; }
+.asl-enquiry .asl-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.asl-enquiry label { display: block; min-width: 0; color: var(--asl-ink); font-weight: 650; font-size: 14px; line-height: 1.5; }
+.asl-enquiry input, .asl-enquiry select, .asl-enquiry textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 48px;
+  margin: 8px 0 0;
+  padding: 12px;
+  border: 1px solid var(--asl-border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--asl-ink);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  box-shadow: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.asl-enquiry textarea { resize: vertical; }
+.asl-enquiry input::placeholder, .asl-enquiry textarea::placeholder { color: var(--asl-muted); opacity: 1; }
+.asl-enquiry :focus-visible { outline: 3px solid var(--asl-ink); outline-offset: 3px; }
+.asl-enquiry input:focus, .asl-enquiry select:focus, .asl-enquiry textarea:focus {
+  border-color: var(--asl-ink);
+  box-shadow: 0 0 0 3px var(--asl-accent);
+}
+.asl-enquiry fieldset { min-width: 0; border: 0; padding: 0; margin: 32px 0; }
+.asl-enquiry legend {
+  width: 100%;
+  padding: 0 0 14px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--asl-accent);
+  color: var(--asl-ink);
+  font-size: clamp(18px, 2.5vw, 20px);
+  font-weight: 750;
+  line-height: 1.4;
+}
+.asl-enquiry .asl-guidance {
+  padding: 16px 20px;
+  border-left: 4px solid var(--asl-accent);
+  border-radius: 0 12px 12px 0;
+  background: var(--asl-surface);
+  color: var(--asl-ink);
+  font-size: 14px;
+}
+.asl-enquiry button {
+  min-height: 48px;
+  max-width: 100%;
+  padding: 13px 24px;
+  border: 1px solid var(--asl-ink);
+  border-radius: 999px;
+  background: var(--asl-ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  line-height: 1.5;
+  white-space: normal;
+  cursor: pointer;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.asl-enquiry button[type=reset] { background: #fff; color: var(--asl-ink); }
+.asl-enquiry button:disabled { opacity: .55; cursor: not-allowed; }
+.asl-enquiry .asl-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.asl-enquiry .asl-output {
+  margin-top: 32px;
+  padding: clamp(16px, 3vw, 28px);
+  border: 1px solid #dce1e9;
+  border-top: 3px solid var(--asl-accent);
+  border-radius: 20px;
+  background: var(--asl-surface);
+}
+.asl-enquiry .asl-output .asl-note { margin-bottom: 0; }
+.asl-enquiry .asl-status { color: var(--asl-ink); font-size: 14px; font-weight: 650; }
+.asl-enquiry .asl-status:empty { margin: 0; }
+.asl-enquiry [hidden] { display: none !important; }
+@media (hover: hover) {
+  .asl-enquiry input:hover, .asl-enquiry select:hover, .asl-enquiry textarea:hover { border-color: var(--asl-ink); }
+  .asl-enquiry button:not(:disabled):hover {
+    background: var(--asl-accent);
+    color: var(--asl-ink);
+    border-color: var(--asl-ink);
+    box-shadow: 0 4px 12px rgba(28, 37, 65, .12);
+    transform: translateY(-1px);
+  }
+}
+@media (max-width: 600px) {
+  .asl-enquiry { margin: 12px auto; border-radius: 18px; }
+  .asl-enquiry .asl-grid { grid-template-columns: 1fr; gap: 20px; }
+  .asl-enquiry .asl-actions button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .asl-enquiry input, .asl-enquiry select, .asl-enquiry textarea, .asl-enquiry button { transition: none; }
+  .asl-enquiry button:not(:disabled):hover { transform: none; }
+}
+</style>
+<div class="asl-kicker">ASSURE SOLUTIONS · LET’S BUILD YOUR BRIEF</div>
+<h2>Tell us what you have in mind.</h2>
+<p>Exhibition booths, signage, branding and interior fit-outs. Share what you know; we’ll confirm the details before quoting.</p>
+<p class="asl-note">* Required. Estimated dimensions are welcome. Nothing is sent or saved by this form. Generate your summary, then copy and paste it into your WhatsApp conversation with Assure.</p>
+<noscript>Enable JavaScript to generate and copy an enquiry summary.</noscript>
+<form action="#" method="post">
+<fieldset disabled><legend>01 / Project and contact details</legend><div class="asl-grid"><label>Your name *<input name="name" type="text" required maxlength="100" autocomplete="name"></label><label>Company (optional)<input name="company" type="text" maxlength="120" autocomplete="organization"></label><label>Phone / WhatsApp *<input name="phone" type="tel" required maxlength="30" autocomplete="tel"></label><label>Email *<input name="email" type="email" required maxlength="160" autocomplete="email"></label><label>Project type *<select name="type"><option>Exhibition booth</option><option>Signage</option><option>Branding</option><option>Interior fit-out</option></select></label><label>Project / business name *<input name="project" type="text" required maxlength="120"></label><label>Venue, town and installation location *<input name="location" type="text" required maxlength="200"></label><label>Installation needed?<select name="installation"><option>Yes</option><option>No — supply only</option><option>To be confirmed</option></select></label><label>Measurement status<select name="measurement"><option>Estimated — site measurement needed</option><option>Confirmed measurements</option><option>Not yet measured</option></select></label><label>Width (optional)<input name="width" type="number" min="0.01" max="100000" step="any"></label><label>Depth / length (optional)<input name="depth" type="number" min="0.01" max="100000" step="any"></label><label>Height (optional)<input name="height" type="number" min="0.01" max="100000" step="any"></label><label>Dimension unit<select name="unit"><option>metres</option><option>centimetres</option><option>millimetres</option><option>feet</option></select></label><label>Installation / delivery date status<select name="dateStatus"><option>To be confirmed</option><option>Preferred date</option><option>Fixed deadline</option></select></label><label>Installation / delivery date<input name="date" type="date" ></label><label>Budget status<select name="budgetStatus"><option>To be confirmed</option><option>Indicative budget available</option></select></label><label>Indicative budget (KSh)<input name="budget" type="number" min="1" max="1000000000" step="any"></label><label>Budget VAT basis<select name="vat"><option>Not confirmed</option><option>Including VAT</option><option>Excluding VAT</option></select></label></div></fieldset>
+<p class="asl-guidance" aria-live="polite"></p>
+<label>Materials, finishes and quantities (optional)<textarea name="materials" rows="3" maxlength="2000" placeholder="For example: board type, illuminated letters, vinyl finish, number of units"></textarea></label>
+<br><label>Additional requirements (optional)<textarea name="requirements" rows="4" maxlength="3000" placeholder="Access restrictions, power, artwork, dismantling, display loads, deadline notes or details still to confirm"></textarea></label>
+<div class="asl-actions"><button type="submit" disabled>Generate WhatsApp summary</button><button type="reset">Clear form</button></div>
+<div class="asl-output" hidden><label>Enquiry summary — review before sharing<textarea name="summary" rows="16" readonly></textarea></label><div class="asl-actions"><button type="button" class="asl-copy">Copy summary</button></div><p class="asl-note">Copy only places the text on your clipboard. Paste and send it yourself in WhatsApp.</p></div>
+<p class="asl-status" role="status" aria-live="polite"></p>
+</form>
+<script>
+(() => {
+  'use strict';
+  document.querySelectorAll('.asl-enquiry').forEach(root => {
+    if (root.dataset.aslReady) return;
+    root.dataset.aslReady = 'true';
+    const form = root.querySelector('form');
+    form.querySelector('fieldset').disabled = false;
+    form.querySelector('[type=submit]').disabled = false;
+    const get = name => form.elements.namedItem(name);
+    const output = root.querySelector('.asl-output');
+    const status = root.querySelector('.asl-status');
+    const tips = {
+      'Exhibition booth': 'Useful details: booth size, open sides, organiser rules, fascia, lighting, furniture, power and dismantling date.',
+      'Signage': 'Useful details: sign quantity, mounting surface, installation height, illumination, power and artwork availability.',
+      'Branding': 'Useful details: surface or vehicle type, quantities, print areas, finish, artwork and removal requirements.',
+      'Interior fit-out': 'Useful details: room layout, display loads, boards or finishes, lighting, access and site-measurement needs.'
+    };
+    const today = () => { const d = new Date(); return [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-'); };
+    function sync() {
+      get('date').required = get('dateStatus').value !== 'To be confirmed';
+      get('date').min = today();
+      get('budget').required = get('budgetStatus').value !== 'To be confirmed';
+      root.querySelector('.asl-guidance').textContent = tips[get('type').value];
+    }
+    function validateText() {
+      ['name','project','location'].forEach(n => get(n).setCustomValidity(get(n).value.trim() ? '' : 'Please enter this detail.'));
+      const phone = get('phone').value.trim();
+      get('phone').setCustomValidity(/^[+\d\s().-]+$/.test(phone) && phone.replace(/\D/g,'').length >= 7 && phone.replace(/\D/g,'').length <= 15 ? '' : 'Enter a phone number with 7–15 digits, including country code where possible.');
+    }
+    function invalidate() { output.hidden = true; get('summary').value = ''; status.textContent = ''; }
+    form.addEventListener('input', () => { invalidate(); sync(); validateText(); });
+    form.addEventListener('change', () => { invalidate(); sync(); validateText(); });
+    form.addEventListener('submit', event => {
+      event.preventDefault(); sync(); validateText();
+      if (!form.reportValidity()) return;
+      const value = n => get(n).value.trim();
+      const dims = ['width','depth','height'].map(n => n + ': ' + (value(n) || 'TBC')).join(' × ');
+      const summary = [
+        'ASSURE SOLUTIONS — PROJECT ENQUIRY',
+        'Project type: ' + value('type'), 'Project: ' + value('project'),
+        'Name: ' + value('name'), 'Company: ' + (value('company') || 'Not provided'),
+        'Phone / WhatsApp: ' + value('phone'), 'Email: ' + value('email'),
+        'Location: ' + value('location'), 'Installation: ' + value('installation'),
+        'Measurements: ' + value('measurement'), 'Dimensions (' + value('unit') + '): ' + dims,
+        'Installation / delivery date: ' + (value('date') || 'TBC') + ' (' + value('dateStatus') + ')',
+        'Budget: ' + (value('budget') ? 'KSh ' + value('budget') : 'TBC') + ' (' + value('budgetStatus') + '; VAT: ' + value('vat') + ')',
+        'Materials, finishes and quantities: ' + (value('materials') || 'To be confirmed'),
+        'Additional requirements: ' + (value('requirements') || 'None provided'),
+        'Please confirm specifications, site measurements and pricing before quotation.'
+      ].join('\n');
+      get('summary').value = summary; output.hidden = false;
+      status.textContent = 'Summary ready. Review it, then copy and paste into WhatsApp.';
+      get('summary').focus();
+    });
+    root.querySelector('.asl-copy').addEventListener('click', async () => {
+      try {
+        if (!navigator.clipboard || !window.isSecureContext) throw new Error('manual');
+        await navigator.clipboard.writeText(get('summary').value);
+        status.textContent = 'Copied. Paste into WhatsApp and send when ready.';
+      } catch (_) {
+        get('summary').focus(); get('summary').select();
+        status.textContent = 'Automatic copy is unavailable. Summary selected: use Copy from your device menu or Ctrl/Cmd+C.';
+      }
+    });
+    form.addEventListener('reset', () => { invalidate(); setTimeout(() => { ['name','project','location','phone'].forEach(n => get(n).setCustomValidity('')); sync(); }, 0); });
+    sync();
+  });
+})();
+</script>
+</section>
