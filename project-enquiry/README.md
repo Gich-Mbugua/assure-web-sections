@@ -21,7 +21,7 @@ For another page or multiple copies, reuse the whole fragment. Instances have in
 
 ## Customisation
 
-Edit the text, project guidance and the CSS variables `--asl-ink` and `--asl-accent` inside the fragment. Preserve field names, class names and script selectors. When changing the fragment, update the embedded section in `demo.html` too. No Assure phone number is hardcoded: clients paste the summary into their existing WhatsApp conversation. No automatic sending or external destination is configured.
+Edit the text, project guidance and the CSS variables inside the fragment. `--asl-ink` is Assure blue (`#1c2541`); `--asl-accent` is gold (`#f8d79f`). Gold is used for decorative details and blue-on-gold hover states, not small text on white. `--asl-muted`, `--asl-border` and `--asl-surface` provide supporting neutral colours. Preserve field names, class names and script selectors. When changing the fragment, update the embedded section in `demo.html` too. No Assure phone number is hardcoded: clients paste the summary into their existing WhatsApp conversation. No automatic sending or external destination is configured.
 
 Required: name, project name, phone, email and location. Project type defaults to exhibition booth. Width, depth/length and height are optional positive numbers with an explicit shared unit. Measurement status distinguishes estimated, confirmed and unmeasured sizes. Date and budget become required when their status indicates a known value; dates before the visitor's local today are rejected. Budget is in KSh with an explicit, initially unconfirmed VAT basis. Supply-only enquiries use the date for delivery. Materials, quantity, artwork, access and other project details can be entered in the two free-text fields.
 
@@ -53,6 +53,19 @@ node tests/enquiry.cjs
 
 Run from the repository root. Runtime users download no dependencies. These checks cover validation, type selection, summary values, HTML-safe user text, clipboard success/fallback, stale summaries, reset, responsive overflow, independent instances and disabled-JavaScript behaviour. Real WordPress/theme interaction still needs staging verification before website publication.
 
+## Brand alignment — 1 November 2026
+
+The existing [Assure homepage](https://assure.co.ke/) stylesheet was read without modifying WordPress. It explicitly defines `--assure-blue:#1c2541` under its “Assure brand blue” rule and `--ap-gold:#f8d79f` in the portfolio styling. These verified colours replace the earlier green palette in both HTML files.
+
+The section uses a white surface, blue headings and buttons, gold dividers, rounded controls and restrained shadows. Typography inherits the host site's font; the standalone demo supplies a system-font fallback. Inputs use 16px text and at least 48px height. Blue focus outlines remain visible against white, with gold field halos. Hover effects apply only to hover-capable devices, and reduced-motion preferences disable transitions and movement. Mobile layouts use one column and full-width action buttons. CSS remains scoped to `.asl-enquiry`; no external fonts or runtime dependencies were introduced.
+
+This is a presentation-only update on PR #1's existing branch. Form markup, validation and JavaScript are unchanged. The repository's open PRs, branches and PR discussion were checked before editing; no other proposed changes or outstanding review requests were present.
+
 ## Validation for this change
 
-Dependency-free logic checks passed locally. The Playwright suite is included but could not run in the preparation environment: Chromium was absent and its download returned a truncated archive. Responsive CSS and markup were reviewed; visual layout and native browser validation remain to be verified using the supplied suite and Elementor staging checklist. No WordPress page was changed.
+- `node tests/logic.cjs` passed: required text/phone logic, all four project types, conditional date/budget requirements, summary values, safe text, both copy paths, stale summary invalidation and reset.
+- Both files' form markup and JavaScript were verified byte-for-byte against the prior commit, and the demo embeds the exact updated Elementor fragment.
+- `git diff --check` passed. Text and control contrast were checked against the new palette.
+- The Playwright suite could not run: Chromium is absent, and the browser download returned an invalid/truncated archive. Rendered layout, native validation, focus and multi-instance browser behaviour still need the supplied browser suite and Elementor staging checklist before publication.
+
+No WordPress page was changed. PR #1 remains unmerged and nothing has been installed or deployed.

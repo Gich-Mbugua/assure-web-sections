@@ -1,7 +1,147 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Assure Solutions | Project enquiry demo</title><body><!-- Paste this entire fragment into one Elementor HTML widget. -->
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Assure Solutions | Project enquiry demo</title><body style="margin:0;padding:16px;background:#fff;font-family:system-ui,sans-serif"><!-- Paste this entire fragment into one Elementor HTML widget. -->
 <section class="asl-enquiry" aria-label="Assure Solutions project enquiry">
 <style>
-.asl-enquiry{--asl-ink:#142e34;--asl-accent:#126957;box-sizing:border-box;max-width:980px;margin:24px auto;padding:clamp(20px,5vw,48px);background:#f5f7f3;border:1px solid #d6ded8;border-radius:20px;color:var(--asl-ink);font:16px/1.5 system-ui,sans-serif}.asl-enquiry *{box-sizing:border-box}.asl-enquiry h2{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:8px 0 16px;color:var(--asl-ink)}.asl-enquiry .asl-kicker{font-size:12px;letter-spacing:.16em;font-weight:750}.asl-enquiry .asl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.asl-enquiry label{display:block;font-weight:650;font-size:14px}.asl-enquiry input,.asl-enquiry select,.asl-enquiry textarea{display:block;width:100%;min-height:48px;margin:7px 0 0;padding:12px;border:1px solid #879e93;border-radius:8px;background:#fff;color:#142e34;font:inherit}.asl-enquiry textarea{resize:vertical}.asl-enquiry :focus-visible{outline:3px solid #b66121;outline-offset:3px}.asl-enquiry fieldset{border:0;padding:0;margin:28px 0}.asl-enquiry legend{font-size:20px;font-weight:750;margin-bottom:16px}.asl-enquiry button{border:1px solid var(--asl-accent);border-radius:8px;padding:13px 20px;background:var(--asl-accent);color:#fff;font:inherit;font-weight:650;cursor:pointer}.asl-enquiry button[type=button]{background:white;color:var(--asl-accent)}.asl-enquiry .asl-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}.asl-enquiry .asl-note{font-size:14px}.asl-enquiry [hidden]{display:none!important}@media(max-width:600px){.asl-enquiry .asl-grid{grid-template-columns:1fr}.asl-enquiry{margin:12px auto;border-radius:12px}.asl-enquiry .asl-actions button{width:100%}}
+.asl-enquiry {
+  /* Verified on assure.co.ke: --assure-blue and --ap-gold (1 November 2026). */
+  --asl-ink: #1c2541;
+  --asl-accent: #f8d79f;
+  --asl-muted: #526078;
+  --asl-border: #8590a3;
+  --asl-surface: #f5f7fa;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 980px;
+  margin: 24px auto;
+  padding: clamp(20px, 5vw, 48px);
+  border: 1px solid #dce1e9;
+  border-top: 4px solid var(--asl-accent);
+  border-radius: 24px;
+  background: #fff;
+  color: var(--asl-ink);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.6;
+  box-shadow: 0 12px 36px rgba(28, 37, 65, .06);
+  overflow-wrap: anywhere;
+  color-scheme: light;
+}
+.asl-enquiry *, .asl-enquiry *::before, .asl-enquiry *::after { box-sizing: border-box; }
+.asl-enquiry h2 {
+  max-width: 22ch;
+  margin: 12px 0 20px;
+  color: var(--asl-ink);
+  font-family: inherit;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+.asl-enquiry p { margin: 0 0 20px; }
+.asl-enquiry .asl-kicker {
+  color: var(--asl-ink);
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: .12em;
+  font-weight: 750;
+}
+.asl-enquiry .asl-note { color: var(--asl-muted); font-size: 14px; line-height: 1.65; }
+.asl-enquiry form { margin: 0; }
+.asl-enquiry .asl-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.asl-enquiry label { display: block; min-width: 0; color: var(--asl-ink); font-weight: 650; font-size: 14px; line-height: 1.5; }
+.asl-enquiry input, .asl-enquiry select, .asl-enquiry textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 48px;
+  margin: 8px 0 0;
+  padding: 12px;
+  border: 1px solid var(--asl-border);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--asl-ink);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  box-shadow: none;
+  transition: border-color .18s ease, box-shadow .18s ease;
+}
+.asl-enquiry textarea { resize: vertical; }
+.asl-enquiry input::placeholder, .asl-enquiry textarea::placeholder { color: var(--asl-muted); opacity: 1; }
+.asl-enquiry :focus-visible { outline: 3px solid var(--asl-ink); outline-offset: 3px; }
+.asl-enquiry input:focus, .asl-enquiry select:focus, .asl-enquiry textarea:focus {
+  border-color: var(--asl-ink);
+  box-shadow: 0 0 0 3px var(--asl-accent);
+}
+.asl-enquiry fieldset { min-width: 0; border: 0; padding: 0; margin: 32px 0; }
+.asl-enquiry legend {
+  width: 100%;
+  padding: 0 0 14px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--asl-accent);
+  color: var(--asl-ink);
+  font-size: clamp(18px, 2.5vw, 20px);
+  font-weight: 750;
+  line-height: 1.4;
+}
+.asl-enquiry .asl-guidance {
+  padding: 16px 20px;
+  border-left: 4px solid var(--asl-accent);
+  border-radius: 0 12px 12px 0;
+  background: var(--asl-surface);
+  color: var(--asl-ink);
+  font-size: 14px;
+}
+.asl-enquiry button {
+  min-height: 48px;
+  max-width: 100%;
+  padding: 13px 24px;
+  border: 1px solid var(--asl-ink);
+  border-radius: 999px;
+  background: var(--asl-ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 650;
+  line-height: 1.5;
+  white-space: normal;
+  cursor: pointer;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.asl-enquiry button[type=reset] { background: #fff; color: var(--asl-ink); }
+.asl-enquiry button:disabled { opacity: .55; cursor: not-allowed; }
+.asl-enquiry .asl-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.asl-enquiry .asl-output {
+  margin-top: 32px;
+  padding: clamp(16px, 3vw, 28px);
+  border: 1px solid #dce1e9;
+  border-top: 3px solid var(--asl-accent);
+  border-radius: 20px;
+  background: var(--asl-surface);
+}
+.asl-enquiry .asl-output .asl-note { margin-bottom: 0; }
+.asl-enquiry .asl-status { color: var(--asl-ink); font-size: 14px; font-weight: 650; }
+.asl-enquiry .asl-status:empty { margin: 0; }
+.asl-enquiry [hidden] { display: none !important; }
+@media (hover: hover) {
+  .asl-enquiry input:hover, .asl-enquiry select:hover, .asl-enquiry textarea:hover { border-color: var(--asl-ink); }
+  .asl-enquiry button:not(:disabled):hover {
+    background: var(--asl-accent);
+    color: var(--asl-ink);
+    border-color: var(--asl-ink);
+    box-shadow: 0 4px 12px rgba(28, 37, 65, .12);
+    transform: translateY(-1px);
+  }
+}
+@media (max-width: 600px) {
+  .asl-enquiry { margin: 12px auto; border-radius: 18px; }
+  .asl-enquiry .asl-grid { grid-template-columns: 1fr; gap: 20px; }
+  .asl-enquiry .asl-actions button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .asl-enquiry input, .asl-enquiry select, .asl-enquiry textarea, .asl-enquiry button { transition: none; }
+  .asl-enquiry button:not(:disabled):hover { transform: none; }
+}
 </style>
 <div class="asl-kicker">ASSURE SOLUTIONS · LET’S BUILD YOUR BRIEF</div>
 <h2>Tell us what you have in mind.</h2>
